@@ -1,6 +1,7 @@
 @echo off
 
 set config=Release
+set inputdir=%~dp0
 set outputdir=C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\build
 set cwd=%CD%
 set commonflags=/p:Configuration=%config%;AllowUnsafeBlocks=true /p:CLSCompliant=False
