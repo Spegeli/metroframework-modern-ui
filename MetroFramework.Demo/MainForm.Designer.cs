@@ -665,7 +665,6 @@
             this.metroComboBox1.Location = new System.Drawing.Point(268, 203);
             this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.PromptText = "Prompted ComboBox";
             this.metroComboBox1.Size = new System.Drawing.Size(283, 29);
             this.metroComboBox1.TabIndex = 5;
             this.metroToolTip.SetToolTip(this.metroComboBox1, "ComboBox Tooltip");
@@ -1106,7 +1105,6 @@
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "With Placeholder support!";
             this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox1.SelectedText = "";
             this.metroTextBox1.SelectionLength = 0;
