@@ -1,7 +1,7 @@
 @echo off
 
 set config=Release
-set outputdir=%cwd%\build
+set outputdir=C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\build
 set cwd=%CD%
 set commonflags=/p:Configuration=%config%;AllowUnsafeBlocks=true /p:CLSCompliant=False
 
@@ -13,13 +13,13 @@ if %PROCESSOR_ARCHITECTURE%==x86 (
 :build
 echo ---------------------------------------------------------------------
 echo Building AnyCpu release...
-%msbuild% "C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\metroframework-modern-ui-master\MetroFramework.sln" %commonflags% /tv:3.5 /p:TargetFrameworkVersion=v2.0 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET20"
+%msbuild% "%inputdir%\MetroFramework.sln" %commonflags% /tv:3.5 /p:TargetFrameworkVersion=v2.0 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET20"
 if errorlevel 1 goto build-error
-%msbuild% "C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\metroframework-modern-ui-master\MetroFramework.sln" %commonflags% /tv:3.5 /p:TargetFrameworkVersion=v3.5 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET35"
+%msbuild% "%inputdir%\MetroFramework.sln" %commonflags% /tv:3.5 /p:TargetFrameworkVersion=v3.5 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET35"
 if errorlevel 1 goto build-error
-%msbuild% "C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\metroframework-modern-ui-master\MetroFramework.sln" %commonflags% /tv:4.0 /p:TargetFrameworkVersion=v4.0 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET40"
+%msbuild% "%inputdir%\MetroFramework.sln" %commonflags% /tv:4.0 /p:TargetFrameworkVersion=v4.0 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET40"
 if errorlevel 1 goto build-error
-%msbuild% "C:\Users\Andreas\Dropbox\VisualStudio\DLLs\Themes\MetroFramework\metroframework-modern-ui-master\MetroFramework.sln" %commonflags% /tv:4.0 /p:TargetFrameworkVersion=v4.5 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET45"
+%msbuild% "%inputdir%\MetroFramework.sln" %commonflags% /tv:4.0 /p:TargetFrameworkVersion=v4.5 /p:Platform="Any Cpu" /p:OutputPath="%outputdir%\AnyCpu\NET45"
 if errorlevel 1 goto build-error
 
 
